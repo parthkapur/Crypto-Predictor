@@ -15,7 +15,7 @@ st.write('''
 #getting the html
 
 crypto = st.selectbox('Which Crpyto-Currency would you like to be predicted?', ('BTC', 'ETH', 'DOGE', 'USDT', 'BNB', 'ADA', 'XRP', 'USDC', 'DOT1', 'HEX', 'UNI3', 'BCH', 'LTC', 'SOL1',
-                                                                                'LINK')
+                                                                                'LINK'))
 url = "https://finance.yahoo.com/quote/" + crypto + "-USD/history?p=" + crypto + "-USD"
 page = requests.get(url)
 soup = BeautifulSoup(page.text, 'lxml')
