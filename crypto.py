@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 import streamlit as st
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 #making the streamlit page
 
