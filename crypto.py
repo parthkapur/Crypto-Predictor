@@ -35,3 +35,8 @@ for row in table_data.find_all('tr')[1:100]:
     length = len(df)
     df.loc[length] = row_data
 st.dataframe(df)
+df1=df.reset_index()['Close*']
+df1 = df1.str.replace(',', '').astype(float)
+scaler=MinMaxScaler(feature_range=(0,1))
+df1=scaler.fit_transform(np.array(df1).reshape(-1,1))
+
